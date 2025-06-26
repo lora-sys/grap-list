@@ -1,0 +1,1343 @@
+<body style="overflow: hidden; position: relative; width: calc(100% - 17px);">
+
+<div class="wrapper-body" id="list_tops">
+<div style="padding-top:56px;">
+	<header id="js-header" class="header" style="z-index:999;">
+		<div class="js-header-wrap header_container default_cursor_cs">
+			<style>
+				.js-header-wrap>div{
+					float:left;
+				}
+			</style>
+		<div class="headerLogo">
+			<a class="headerLogo-link" href="https://data.showsfinder.com">
+				展加<span class="com-color">数据</span>
+			</a>
+			<span class="headerLogo_line">　</span>
+			<span class="headerLogo_bann">
+				客户搜索
+			</span>
+		</div>
+			<div class=" headercon_con">
+				<style>
+    .headercon_con .searchtop_ .searchname {
+        width: 380px !important;
+        max-width: 380px !important;
+        min-width: 380px !important;
+    }
+
+	.searchtop_ .pubsearchs{
+		position: absolute; height:auto;background: #fff; z-index: 99999;    border: 1px solid #efefef;border-top-color: #fff;min-width:200px;
+		/*width:calc(100% - 12px);*/
+		width: max-content;
+		margin-top: -1px;padding:10px;
+
+	}
+	.pubsearchs_all{
+		height: 330px;
+		overflow: auto;
+
+	}
+	.pubsearchs ul li{
+		align-items: center;
+		border-top: 1px solid #f3f3f3;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		padding: 8px 16px 8px 0px;
+	}
+	.pubsearchs ul li:hover{background-color:#f2f2f2}
+	/*
+    .pubsearchs ul li:first-child {
+        border-top: none;
+    }*/
+	.pubsearchs ul li .names{
+		flex-grow: 1;
+		font-size: 14px;
+		line-height: 25px;
+		overflow: hidden;
+		padding: 0px 0px 0px 0px;
+	}
+	.pubsearchs ul li a{
+		line-height: 25px;
+	}
+	.pubsearchs ul li .imgs{
+		position: unset;
+		width: 25px;
+		height: 25px;
+		border-radius: 1px;
+		margin-left:8px;
+	}
+	.pubsearchs ul li .imgs .czslogo{
+		border-radius: 3px;
+	}
+	.pubsearchs  .inputcc{
+		padding: 0px 5px !important;
+	}
+	.pubsearchs_all>ul>li>.names{
+		margin-left:8px;
+	}
+	.pubsearchs  .ttext{color:#999;margin:5px 10px 0px 10px;}.ttext1{margin-left:0px;}
+	.pubsearchs .czslogo{width:100%;height:100%;}
+</style>
+<style>
+	.pubsearchs{
+		width:750px;
+		border: 1px solid #efefef !important;
+	}
+	.pubsearchs_wrap{
+		clear:both;
+		display: flex;
+
+	}
+	.pubsearchs_all{
+		max-width:280px;
+		min-width:280px;
+		/*height: 330px;*/
+		height: 100%;
+		overflow: auto;
+
+	}
+	.pubsearchs ul li{
+		border-top: unset;
+	}
+	.pubsearchs ul li:first-child{
+	}
+	.pubsearchs .czslogo{width:100%;height:100%;}
+	.pubsearchs_right{
+		width:500px;height:100%;margin:10px 20px 20px 60px
+	}
+	.pubsearchs_right ul li{
+		padding: 0px;
+	}
+	.pubsearchs  .search_hot_boxs{
+		padding:0px 0px 0px 10px;
+		display:inline-block;
+	}
+	.pubsearchs  #hot_data_label {
+		display: block;
+		float: left;
+		font-size:12px !important;
+		color:rgba(51,51,51,0.7);
+		font-weight: bold;
+
+		line-height: 32px;
+		color: #999;
+		margin-right: 4px;
+		font-size: 12px;
+	}
+	.pubsearchs .index-hot {
+		font-size: 14px !important;
+	}
+	.pubsearchs #hot_data a {
+		display: block;
+		float: left;
+		padding:0px 10px 0px 0px;
+		font-size: 12px;
+		display: inline-block;
+		color:rgba(51,51,51,0.7);
+		margin-bottom:5px;
+		max-width: 160px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		vertical-align: bottom;
+		padding: 4px 5px;
+		color: #666;
+		background: #eee;
+		margin-right: 6px;
+	}
+	.pubsearchs #hot_data a:not(:last-child) {
+		margin-right: 6px;
+	}
+	.pubsearchs #hot_data a:hover{
+		color:rgba(51,51,51,1);
+	}
+</style>
+<div class="searchtop_">
+	<div class="test-table-reload-btn search-top">
+		<div class="layui-inline">
+			<input class="layui-input searchname" name="keyword_top" id="keyword_top" autocomplete="off" placeholder="请输入公司名称、展会名称、产品名称等关键词" value="">
+		</div>
+		<button class="layui-btn layui-btn-normal1" data-type="reload" lay-submit="" lay-filter="go-search-top" id="go-search-top">搜索</button>
+	</div>
+</div>
+<script src="/static/index/js/se.js?4124"></script>
+
+				<style>
+					.headercon_con .test-table-reload-btn{margin-bottom:unset !important;}
+					.headercon_con #keyword {
+						max-width: 500px;
+						margin-right: 10px;
+					}
+					.headercon_con  .searchname {
+						min-width: 500px !important;
+					}
+					.headercon_con{
+						display: inline-flex;
+						flex-shrink: 0;
+						height: 100%;
+						justify-content: center;
+						position: relative;
+						margin-right: 50px;
+						align-items: center;
+						z-index:9;
+						margin-left:25px;
+					}
+					.headercon_con .pubsearchs ul li{font-size:14px;}
+
+				</style>
+			</div>
+
+		<div class="headerMenu rightheaderMenu com-fltR">
+			<style>
+				.headerMenu .layui-nav {
+					background: 0 0;
+				}
+				.headerMenu a  ,.headerMenu  ,.headerMenu p ,.headerMenu span{
+					color: #333 !important;
+				}
+				.headerMenu .layui-nav-child {
+					left: auto;
+					right: 0;
+					text-align:left;
+					padding:0px !important;
+					/*padding:10px;*/
+				}
+				.headerMenu .layui-nav-child a{
+					line-height:36px;
+				}
+				.headerMenu .layui-nav-child:not(:last-child) {
+					margin-bottom: 0;
+				}
+				.headerMenu .layui-nav-more{
+					display:none;
+				}
+				.logins{
+					display: inline-block;
+					height: 32px;
+					line-height: 32px;
+					border: 1px solid #ff8700;
+					border-radius: 2px;
+					padding: 0 14px;
+					color: #ff8700;
+				}
+				.logins a{
+					padding:0px  !important;;display:inline-block !important;color:#ff8700!important;
+				}
+				.headerNav-itemTitle{
+					height: 100%;
+				}
+				.layui-nav .layui-nav-item .heads-menus-item-active{
+					color: #128bed !important;
+				}
+				.layui-nav .layui-nav-item .heads-menus-item-active:after {
+					content: "";
+					position: absolute;
+					left: 15%;
+					bottom: 0px;
+					width: 0;
+					height: 2px;
+					background-color:#128bed;
+					transition: all .2s;
+					-webkit-transition: all .2s;
+					pointer-events: none;
+					width:70%;
+
+				}
+				@media screen and (max-width: 1490px) {
+					.js-header-wrap.header_container .headercon_con .searchtop_ .searchname {
+						width: 300px !important;
+						max-width: 300px !important;
+						min-width: 300px !important;
+					}
+
+					.js-header-wrap.header_container .headerNav-itemTitle {
+						margin: 0px 8px;
+					}
+					.js-header-wrap.header_container .layui-nav .layui-nav-item a{
+						padding:0px 8px !important;
+					}
+				}
+				@media screen and (max-width:1300px) {
+					.js-header-wrap.header_container .headercon_con .searchtop_ .searchname {
+						width: 220px !important;
+						max-width: 220px !important;
+						min-width: 220px !important;
+					}
+				}
+				@media screen and (max-width:1250px) {
+					.js-header-wrap.header_container .headercon_con .searchtop_ .searchname {
+						width: 220px !important;
+						max-width: 220px !important;
+						min-width: 220px !important;
+					}
+
+					.js-header-wrap.header_container .headerNav-itemTitle {
+						margin: 0px 4px;
+					}
+					.js-header-wrap.header_container .layui-nav .layui-nav-item a{
+						padding:0px 4px !important;
+					}
+				}
+				@media screen and (max-width:1200px) {
+					.js-header-wrap.header_container .headercon_con .searchtop_ .searchname {
+						width: 200px !important;
+						max-width: 200px !important;
+						min-width: 200px !important;
+					}
+					.js-header-wrap.header_container .headerNav-itemTitle {
+						margin: 0px 2px  !important;
+					}
+					.js-header-wrap.header_container .layui-nav .layui-nav-item a{
+						padding:0px  2px  !important;
+					}
+				}
+			</style>
+			<ul class="layui-nav layui-layout-right default_cursor_cs" lay-filter="layadmin-layout-right" style="height:100%;">
+			<!--<ul class="headerNav" style="height:100%;">-->
+				<li class="layui-nav-item" style="height:100%;">
+					<a class="headerNav-itemTitle   " href="https://mp.weixin.qq.com/s/g-jcEYbTbIKHinVetds-JA" target="_blank"><img src="/static/index/images/t7.png" width="20px"> 联盟</a>
+				</li>
+				<li class="layui-nav-item" style="height:100%;">
+					<a class="headerNav-itemTitle   " href="https://mp.weixin.qq.com/s/yNiFsuvT-OfaObQtKO8VBQ" target="_blank"><img src="/static/index/images/t8.png" width="20px"> 参展</a>
+				</li>
+				<li class="layui-nav-item default_cursor_cs" style="height:100%;">
+					<a class="headerNav-itemTitle default_pointer_cs" href="https://data.showsfinder.com/zl" target="_blank"><img src="/static/index/images/t2.png" width="20px"> 价格</a>
+				</li>
+
+								<li class="layui-nav-item default_cursor_cs" style="margin-left:40px;">
+					<div class="logins">
+						<a class="lb register f16 default_pointer_cs" name="tj_register" href="javascript:void(0)" onclick="tj_register();">注册</a> |
+						<a class="lb login f16" name="tj_login" href="javascript:void(0)" onclick="tj_login();">登录</a>
+					</div>
+
+				</li>
+				
+			<span class="layui-nav-bar" style="left: 0px; top: 51px; width: 0px; opacity: 0;"></span></ul>
+		</div>
+
+		</div>
+	</header>
+	<style>
+	.jumbotron{
+		padding:0px !important;
+	}
+	body {
+		min-width: 1250px;
+	}
+	@media screen and (min-width:1440px) {
+		.wraps_mains {
+			padding-left: 240px;
+			transition: all .3s;
+			-webkit-transition: all .3s;
+		}
+	}
+	.wraps_mains {
+		padding-left: 200px;
+		transition: all .3s;
+		-webkit-transition: all .3s;
+	}
+	.layui-body#LAY_app_body{
+		position: unset;
+	}
+	.layadmin-side-shrink .wraps_mains {
+		padding-left: 60px;
+		transition: all .3s;
+		-webkit-transition: all .3s;
+	}
+	.layadmin-side-shrink .layui-side {
+		left: 0;
+		width: 60px;
+	}
+</style>
+	<div id="LAY_app"><div class=" layui-layout-admin">
+<script src="/static/index/js/he.js?4124"></script>
+<div class="layui-body" id="LAY_app_body">
+<main class="wraps_mains"><!--content com-mb40 container pm -->
+<link href="/static/index/css/l.css" rel="stylesheet">
+<div class="wraps-lefts layui-side  ">
+	<div class="layui-side-scroll default_cursor_cs">
+		<ul class="left-menus default_cursor_cs" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
+				<li class="left-menus-item ">
+					<a href="https://data.showsfinder.com/" class="left-menus-item- default_pointer_cs">
+						<i class="layui-icon layui-icon-home"></i>
+						<span>首页</span></a>
+				</li>
+			<li class=" left-menus-items left-menus-item-open  ">
+				<div class="menu-submenu-title default_cursor_cs">
+					<a href="javascript:void(0)" class="left-menus-item- default_pointer_cs">
+						<i class="layui-icon layui-icon-search default_pointer_cs"></i>
+						<span>客户搜索</span>
+					</a>
+					<i class="downup"></i>
+				</div>
+				<ul class="left-menus   ">
+					<li class="left-menus-item  ">
+						<a href="https://data.showsfinder.com/advsearch.html" class="left-menus-item- default_pointer_cs"><span>高级搜索</span></a>
+					</li>
+
+					<li class="left-menus-item  ">
+						<a href="https://data.showsfinder.com/exhibition" class="left-menus-item- default_pointer_cs"><span>数据专辑</span></a>
+					</li>
+				</ul>
+
+			</li>
+						</ul>
+	</div>
+	<div class="wraps-lefts-button">
+		<div class="wraps-lefts-button-main">
+			<button layadmin-event="flexible" class="default_pointer_cs">
+				<a href="javascript:;" title="侧边伸缩">
+					<i class="layui-icon layui-icon-shrink-right" id="LAY_app_flexible"></i>
+				</a>
+			</button>
+		</div>
+	</div>
+</div>
+<div class="wraps_mains_con default_cursor_cs" style="padding:15px 20px;position:relative;z-index:99;">
+<script>
+var pid = "4LyMb97m3lBNwRk1bEpDgvkraW06oXPz";
+</script>
+
+<div class="com-pb10 default_cursor_cs">
+	<script src="/static/index/js/viewer.js?2"></script>
+<link href="/static/index/css/viewer.css" rel="stylesheet">
+<link href="/static/index/css/company_list_new.css?4124" rel="stylesheet">
+<link href="/static/index/css/view.css?4124" rel="stylesheet">
+
+<script>
+    var vid = "4LyMb97m3lBNwRk1bEpDgvkraW06oXPz";
+</script>
+<div class="">
+        <link href="/static/index/css/t.css?4124" rel="stylesheet">
+
+<div class="viewmaintop">
+    <section class="websiteHeader zj_analysisHeader default_cursor_cs">
+        <div class="websiteHeader-topInner">
+            <div class="websiteHeader-captionContainer">
+                <h2 class="websiteHeader-caption">
+                    <span class="websiteHeader-captionItem default_cursor_cs">
+                        <span class="legendItem-iconContainer">
+                            <span class="legendItem-iconBg">
+								<img class="legendItem-icon" src="http://cdn.showsfinder.com/zhht/4341593618707363.jpg" onerror="this.src='http://cdn.showsfinder.com/defaultlogo.png'" alt="">
+                            </span>
+                        </span>
+                        <span class="websiteHeader-captionText fontNum default_pointer_cs" onclick="tj_login();" data-v="BkzdjGbXoNe7vqz8m4VJmPY9l4wWQpA2" data-t="0" style="cursor: pointer">
+                        德国慕尼黑国际太阳能技术博览会</span>
+						<span style="font-size:14px;font-weight:normal;" class="default_cursor_cs">　　5月07日&nbsp;-&nbsp;5月09日，2025　　慕尼黑&nbsp;-&nbsp;德国</span>
+
+                    </span>
+                </h2>
+                <div class="websiteHeader-btn">
+                                        <a class="new-btn needLogin" href="javascript:void(0)" data-value="" data="德国慕尼黑国际太阳能技术博览会"> <span class="focusable">立即收藏</span></a>
+                                    </div>
+
+        </div>
+
+        </div>
+        
+    </section>
+
+    
+</div>
+</div>
+		<div class="company-main layui-col-md12 company-main-new " id="listpagetop">
+	<div class="layui-col-md12 com-bg-f com-p0">
+		<div class="filter-box">
+        <div class="filter-top-box">
+
+            <div class="filter-tag-search default_cursor_cs">
+                <ul class="filter-tag-box">
+                </ul>
+                <div class="filter-search default_cursor_cs">
+                    <span class="default_cursor_cs"><i class="iconfont"><img src="/static/index/images/addre.png" width="12px"></i></span>
+                    <input id="list_search" type="text" placeholder="输入关键字，按回车键查询">
+                </div>
+            </div>
+
+            <div class="filter-tag-action">
+                <div class="tag-clear-btn" id="clear_all">清除筛选</div>
+            </div>
+        </div>
+        <ul class="filter-options-box">
+                        <li data-type="country">
+                <span class="default_pointer_cs"><em>国家</em><i class="iconfont icon-retract"></i></span>
+               <ul class="options-item-list options-item-list-country default_pointer_cs" id="country_menu"> 
+						 <li data-value="德国"><a href="javascript:;" class="default_pointer_cs">德国 </a></li>
+					   
+						 <li data-value="中国"><a href="javascript:;" class="default_pointer_cs">中国 </a></li>
+					   
+						 <li data-value="意大利"><a href="javascript:;" class="default_pointer_cs">意大利 </a></li>
+					   
+						 <li data-value="西班牙"><a href="javascript:;" class="default_pointer_cs">西班牙 </a></li>
+					   
+						 <li data-value="荷兰"><a href="javascript:;">荷兰 </a></li>
+					   
+						 <li data-value="法国"><a href="javascript:;">法国 </a></li>
+					   
+						 <li data-value="美国"><a href="javascript:;">美国 </a></li>
+					   
+						 <li data-value="土耳其"><a href="javascript:;">土耳其 </a></li>
+					   
+						 <li data-value="瑞士"><a href="javascript:;">瑞士 </a></li>
+					   
+						 <li data-value="奥地利"><a href="javascript:;">奥地利 </a></li>
+					   
+						 <li data-value="波兰"><a href="javascript:;">波兰 </a></li>
+					   
+						 <li data-value="挪威"><a href="javascript:;">挪威 </a></li>
+					   
+						 <li data-value="印度"><a href="javascript:;">印度 </a></li>
+					   
+						 <li data-value="英国"><a href="javascript:;">英国 </a></li>
+					   
+						 <li data-value="韩国"><a href="javascript:;">韩国 </a></li>
+					   
+						 <li data-value="捷克"><a href="javascript:;">捷克 </a></li>
+					   
+						 <li data-value="葡萄牙"><a href="javascript:;">葡萄牙 </a></li>
+					   
+						 <li data-value="比利时"><a href="javascript:;">比利时 </a></li>
+					   
+						 <li data-value="希腊"><a href="javascript:;">希腊 </a></li>
+					   
+						 <li data-value="丹麦"><a href="javascript:;">丹麦 </a></li>
+					   
+						 <li data-value="斯洛文尼亚"><a href="javascript:;">斯洛文尼亚 </a></li>
+					   
+						 <li data-value="阿联酋"><a href="javascript:;">阿联酋 </a></li>
+					   
+						 <li data-value="日本"><a href="javascript:;">日本 </a></li>
+					   
+						 <li data-value="匈牙利"><a href="javascript:;">匈牙利 </a></li>
+					   
+						 <li data-value="罗马尼亚"><a href="javascript:;">罗马尼亚 </a></li>
+					   
+						 <li data-value="保加利亚"><a href="javascript:;">保加利亚 </a></li>
+					   
+						 <li data-value="卢森堡"><a href="javascript:;">卢森堡 </a></li>
+					   
+						 <li data-value="芬兰"><a href="javascript:;">芬兰 </a></li>
+					   
+						 <li data-value="爱尔兰"><a href="javascript:;">爱尔兰 </a></li>
+					   
+						 <li data-value="瑞典"><a href="javascript:;">瑞典 </a></li>
+					   
+						 <li data-value="以色列"><a href="javascript:;">以色列 </a></li>
+					   
+						 <li data-value="乌克兰"><a href="javascript:;">乌克兰 </a></li>
+					   
+						 <li data-value="新加坡"><a href="javascript:;">新加坡 </a></li>
+					   
+						 <li data-value="斯洛伐克"><a href="javascript:;">斯洛伐克 </a></li>
+					   
+						 <li data-value="南非"><a href="javascript:;">南非 </a></li>
+					   
+						 <li data-value="突尼斯"><a href="javascript:;">突尼斯 </a></li>
+					   
+						 <li data-value="俄罗斯"><a href="javascript:;">俄罗斯 </a></li>
+					   
+						 <li data-value="塞浦路斯"><a href="javascript:;">塞浦路斯 </a></li>
+					   
+						 <li data-value="立陶宛"><a href="javascript:;">立陶宛 </a></li>
+					   
+						 <li data-value="巴西"><a href="javascript:;">巴西 </a></li>
+					   
+						 <li data-value="哈萨克斯坦"><a href="javascript:;">哈萨克斯坦 </a></li>
+					   
+						 <li data-value="哥伦比亚"><a href="javascript:;">哥伦比亚 </a></li>
+					   
+						 <li data-value="列支敦士登"><a href="javascript:;">列支敦士登 </a></li>
+					   
+						 <li data-value="中国内地"><a href="javascript:;">中国内地 </a></li>
+					   
+						 <li data-value="留尼旺"><a href="javascript:;">留尼旺 </a></li>
+					   
+						 <li data-value="加拿大"><a href="javascript:;">加拿大 </a></li>
+					   
+						 <li data-value="克罗地亚"><a href="javascript:;">克罗地亚 </a></li>
+					   
+						 <li data-value="澳大利亚"><a href="javascript:;">澳大利亚 </a></li>
+					   
+						 <li data-value="埃及"><a href="javascript:;">埃及 </a></li>
+					   
+						 <li data-value="摩洛哥"><a href="javascript:;">摩洛哥 </a></li>
+					   
+						 <li data-value="爱沙尼亚"><a href="javascript:;">爱沙尼亚 </a></li>
+					   
+						 <li data-value="未知"><a href="javascript:;">未知 </a></li>
+					  </ul>
+				<script id="searchCountryTemplate" type="text/html">
+			   					 {{each rows as value }} 
+						 <li data-value="{{value.country  ? value.country : '未知'}}"><a href="javascript:;">{{value.country ? value.country : '未知'}} </a></li>
+					  {{/each}}
+			   			   </script>
+            </li>
+            
+			<li data-type="ncard_flag">
+                <span class="default_pointer_cs"><em class="default_pointer_cs">联系方式</em><i class="iconfont icon-retract"></i></span>
+                <ul class="options-item-list default_pointer_cs">
+                    <li data-value="1"><a href="javascript:;" class="default_pointer_cs">有联系方式</a></li>
+                    <li data-value="2" class="default_pointer_cs"><a href="javascript:;" class="default_pointer_cs">无联系方式</a></li>
+                </ul>
+            </li>
+
+            <li data-type="decorate">
+                <span class="default_pointer_cs"><em>特装</em><i class="iconfont icon-retract"></i></span>
+                <ul class="options-item-list">
+                    <li data-value="1"><a href="javascript:;">特装企业</a></li>
+                    <li data-value="2"><a href="javascript:;">非特装企业</a></li>
+                </ul>
+            </li>
+            <li data-type="gjjl">
+                <span class="default_pointer_cs"><em>跟进</em><i class="iconfont icon-retract"></i></span>
+                <ul class="options-item-list">
+                    <li data-value="1"><a href="javascript:;">已跟进</a></li>
+                    <li data-value="2"><a href="javascript:;">未跟进</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+	
+<script id="filterTemplate" type="text/html">
+			{each data as item}
+		<li>
+			<p data-id="{item.id}">
+				{each item.param as pitem}
+					{each pitem.text}
+					<span></span>
+					{/each}
+				{/each}
+			</p>
+			<i data-id="{item.id}" class="iconfont icon-shanchu"></i>
+		</li>
+		{/each}
+	</script>
+
+<script id="cityListTemplate" type="text/html">
+  {{each rows as v }} 
+			<li data-value="{{v.city}}"><a href="javascript:;">{{v.city}}</a></li>
+	{{/each}}
+</script>
+		<div class="company-list">
+			<div class="sort-box default_cursor_cs">
+				<span class="total default_cursor_cs">共<em>1537</em>条结果</span>
+				<p class="sort">
+					<span class="search_order" data-type="orderby" data-value="ennum">参展记录排序</span>
+				</p>
+			</div>
+			<div class="no-data default_cursor_cs" style="display: none;"></div>
+			<div class="company-list-box " id="list" style="display:block;padding:0px;"><div class="company-list-left">
+            <ul>
+                <li>
+                    <div class="col-md-12 com-wc default_cursor_cs">公司名称</div>
+                </li>
+                
+                <li data-e="Wy1Nw2GQj0v89m135oVaPnVR4YJz3rlk" class="promptaisho default_cursor_cs" data-q="jRXDMNn5PgE9xaje0k1Bp3kwrLQd1OKv" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+                    <a class="logo-box font13  show_floating_frame " href="javascript:void(0)">
+                        
+                        <img src="http://cdn.showsfinder.com/exh/exh32/b9f3a9ff63c017aae9ee6eb848d1b115.jpg" alt="" onerror="this.src='/static/index/images/defaultlogo.png'" class="ed-imgauto default_pointer_cs">
+                        
+                    </a>
+
+                <div class="divboxs_con default_cursor_cs" style="height:auto;">
+                    <div class="divboxs intro default_cursor_cs">
+                    <a class="show_floating_frame default_pointer_cs" href="javascript:void(0)" title="青岛高测科技股份有限公司" style="color: rgb(51, 51, 51);">青岛高测科技股份有限公司</a>
+                                            </div>
+                    
+                    <div class="com-clear text-ellipsis tag default_cursor_cs" style="height:30px;">
+                        
+                        <span class="tag00 default_cursor_cs" style="vertical-align: top;">特装</span>
+                        
+                        <span class="tag00" style="vertical-align: top;">企业技术中心</span><span class="tag00 default_cursor_cs" style="vertical-align: top;">技术创新示范企业</span><span class="tag00" style="vertical-align: top;">隐形冠军企业</span><span class="tag00" style="vertical-align: top;">专精特新中小企业</span><span class="tag00" style="vertical-align: top;">高新技术企业</span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <i class="zjicon zjicon_new hide"></i>
+
+            </li>
+                
+                <li data-e="1pQe7VGMyo3qWBlr1enZKgxvNJ2lkz8P" class="promptaisho default_cursor_cs" data-q="r931exVLXGd4gZJPepEB8ky0KOlwovQW" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+                    <a class="logo-box font13  show_floating_frame " href="javascript:void(0)">
+                        
+                        <img src="http://cdn.showsfinder.com/exh/exh85/3404c6fcbccf82878a9440eb5331b419.jpg" alt="" onerror="this.src='/static/index/images/defaultlogo.png'" class="ed-imgauto default_pointer_cs">
+                        
+                    </a>
+
+                <div class="divboxs_con" style="height:auto;">
+                    <div class="divboxs intro default_cursor_cs">
+                    <a class="show_floating_frame default_pointer_cs" href="javascript:void(0)" title="营口金辰机械股份有限公司">营口金辰机械股份有限公司</a>
+                                            </div>
+                    
+                    <div class="com-clear text-ellipsis tag default_cursor_cs" style="height:30px;">
+                        
+                        <span class="tag00" style="vertical-align: top;">特装</span>
+                        
+                        <span class="tag00" style="vertical-align: top;">企业技术中心</span><span class="tag00 default_cursor_cs" style="vertical-align: top;">专精特新“小巨人”企业</span><span class="tag00" style="vertical-align: top;">高新技术企业</span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <i class="zjicon zjicon_new hide"></i>
+
+            </li>
+                
+                <li data-e="6PQvMwX75kdnGZd3e4OaDe0EOAb1rjKg" class="promptaisho default_cursor_cs" data-q="PNbXvjMky3DYLaKR0oB4qGzgWKdEol2p" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+                    <a class="logo-box font13  show_floating_frame " href="javascript:void(0)">
+                        
+                        <img src="http://cdn.showsfinder.com/exh/exh9/6b13fc7f71d4a978bf3c191094e47c56.jpg" alt="" onerror="this.src='/static/index/images/defaultlogo.png'" class="ed-imgauto default_pointer_cs">
+                        
+                    </a>
+
+                <div class="divboxs_con" style="height:auto;">
+                    <div class="divboxs intro default_cursor_cs">
+                    <a class="  show_floating_frame " href="javascript:void(0)" title="无锡鑫宏业特塑线缆有限公司">无锡鑫宏业特塑线缆有限公司</a>
+                                            </div>
+                    
+                    <div class="com-clear text-ellipsis tag default_cursor_cs" style="height:30px;">
+                        
+                        <span class="tag00 default_cursor_cs" style="vertical-align: top;">特装</span>
+                        
+                        <span class="tag00" style="vertical-align: top;">企业技术中心</span><span class="tag00" style="vertical-align: top;">专精特新“小巨人”企业</span><span class="tag00" style="vertical-align: top;">独角兽企业</span><span class="tag00" style="vertical-align: top;">专精特新中小企业</span><span class="tag00" style="vertical-align: top;">高新技术企业</span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <i class="zjicon zjicon_new hide"></i>
+
+            </li>
+                
+                <li data-e="nLNreKDQ0Evl1mv5nN0Z584pMOjAqozx" class="promptaisho default_cursor_cs" data-q="zO25YVXj3lkEga87vPOB68Prw1RbdqDv" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+                    <a class="logo-box font13  show_floating_frame " href="javascript:void(0)">
+                        
+                        <img src="http://cdn.showsfinder.com/exh/exh23/9aef01e435981b232936f37688e2a561.jpg" alt="" onerror="this.src='/static/index/images/defaultlogo.png'" class="ed-imgauto">
+                        
+                    </a>
+
+                <div class="divboxs_con" style="height:auto;">
+                    <div class="divboxs intro ">
+                    <a class="  show_floating_frame " href="javascript:void(0)" title="湖州上辐电线电缆高技术有限公司">湖州上辐电线电缆高技术有限公司</a>
+                                            </div>
+                    
+                    <div class="com-clear  text-ellipsis   tag" style="height:30px;">
+                        
+                        <span class="tag00" style="vertical-align: top;">特装</span>
+                        
+                        
+                    </div>
+                    
+                    
+                    
+                </div>
+                <i class="zjicon zjicon_new hide"></i>
+
+            </li>
+                
+                <li data-e="klgXozrypn6bjmXXxvmeY3v7wE520GMq" class="promptaisho" data-q="8rQb7EpwxLvjNm4pddmg39V6PDkzdnoG" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+                    <a class="logo-box font13  show_floating_frame " href="javascript:void(0)">
+                        
+                        <img src="http://cdn.showsfinder.com/exh/exh10/d6713d880af444fa87c498ef78ac2bd7.jpg" alt="" onerror="this.src='/static/index/images/defaultlogo.png'" class="ed-imgauto">
+                        
+                    </a>
+
+                <div class="divboxs_con" style="height:auto;">
+                    <div class="divboxs intro ">
+                    <a class="  show_floating_frame " href="javascript:void(0)" title="深圳华盛昌机械实业有限公司">深圳华盛昌机械实业有限公司</a>
+                                            </div>
+                    
+                    <div class="com-clear  text-ellipsis   tag" style="height:30px;">
+                        
+                        <span class="tag00" style="vertical-align: top;">特装</span>
+                        
+                        <span class="tag00" style="vertical-align: top;">高新技术企业</span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <i class="zjicon zjicon_new hide"></i>
+
+            </li>
+                
+                <li data-e="joQz6GxpOE4qVZ9Nz8qm17Ngwb2PkDyv" class="promptaisho" data-q="zO25YVXj3lkEga8qLqWZ68Prw1RbdqDv" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+                    <a class="logo-box font13  show_floating_frame " href="javascript:void(0)">
+                        
+                        <span class="czslogo " style="border-radius:0px !important;font-size:14px !important;">江</span>
+                        
+                    </a>
+
+                <div class="divboxs_con" style="height:auto;">
+                    <div class="divboxs intro ">
+                    <a class="  show_floating_frame " href="javascript:void(0)" title="江苏佳讯纳通能源技术有限公司">江苏佳讯纳通能源技术有限公司</a>
+                                            </div>
+                    
+                    <div class="com-clear  text-ellipsis   tag" style="height:30px;">
+                        
+                        <span class="tag00" style="vertical-align: top;">特装</span>
+                        
+                        <span class="tag00" style="vertical-align: top;">企业技术中心</span><span class="tag00" style="vertical-align: top;">民营科技企业</span><span class="tag00" style="vertical-align: top;">瞪羚企业</span><span class="tag00" style="vertical-align: top;">专精特新中小企业</span><span class="tag00" style="vertical-align: top;">高新技术企业</span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <i class="zjicon zjicon_new hide"></i>
+
+            </li>
+                
+                <li data-e="vAWpyMbN0od94aWvA2NB3Y7jGrwzeKD8" class="promptaisho" data-q="">
+                    <a class="logo-box font13  show_floating_frame " href="javascript:void(0)">
+                        
+                        <span class="czslogo " style="border-radius:0px !important;font-size:14px !important;">Z</span>
+                        
+                    </a>
+
+                <div class="divboxs_con">
+                    <div class="divboxs intro ">
+                    <a class="  show_floating_frame " href="javascript:void(0)" title="Zucchetti Centro Sistemi SpA">Zucchetti Centro Sistemi SpA</a>
+                                            </div>
+                    
+                    
+                    
+                </div>
+                <i class="zjicon zjicon_new hide"></i>
+
+            </li>
+                
+                <li data-e="7qKGvXbr1lVEzZon10GaWwnP23opR4k0" class="promptaisho" data-q="Yz1POLMeRrl6DmDbVnPa35vxQqJbGnjg" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+                    <a class="logo-box font13  show_floating_frame " href="javascript:void(0)">
+                        
+                        <span class="czslogo " style="border-radius:0px !important;font-size:14px !important;">天</span>
+                        
+                    </a>
+
+                <div class="divboxs_con" style="height:auto;">
+                    <div class="divboxs intro ">
+                    <a class="  show_floating_frame " href="javascript:void(0)" title="天津彩达新材料科技有限公司">天津彩达新材料科技有限公司</a>
+                                            </div>
+                    
+                    <div class="com-clear  text-ellipsis   tag" style="height:30px;">
+                        
+                        <span class="tag00" style="vertical-align: top;">特装</span>
+                        
+                        <span class="tag00" style="vertical-align: top;">科技型中小企业</span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <i class="zjicon zjicon_new hide"></i>
+
+            </li>
+                
+                <li data-e="95MnA0Pd3y1roZL6RvgBeYK8vWpGE6OV" class="promptaisho" data-q="">
+                    <a class="logo-box font13  show_floating_frame " href="javascript:void(0)">
+                        
+                        <span class="czslogo " style="border-radius:0px !important;font-size:14px !important;">R</span>
+                        
+                    </a>
+
+                <div class="divboxs_con">
+                    <div class="divboxs intro ">
+                    <a class="  show_floating_frame " href="javascript:void(0)" title="Robert Bürkle GmbH">Robert Bürkle GmbH</a>
+                                            </div>
+                    
+                    
+                    
+                </div>
+                <i class="zjicon zjicon_new hide"></i>
+
+            </li>
+                
+                <li data-e="PWRd1K3Xj2JY7mVk8JBk0xD8GLzQel4b" class="promptaisho" data-q="YGpLgPkJeVzXDZq2MPmOjw5qEKQ0l6r2" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+                    <a class="logo-box font13  show_floating_frame " href="javascript:void(0)">
+                        
+                        <img src="http://cdn.showsfinder.com/exh/exh13/d3a5eb9f35c1eb8c7f75e5bf3c8aad20.jpg" alt="" onerror="this.src='/static/index/images/defaultlogo.png'" class="ed-imgauto">
+                        
+                    </a>
+
+                <div class="divboxs_con" style="height:auto;">
+                    <div class="divboxs intro ">
+                    <a class="  show_floating_frame " href="javascript:void(0)" title="深圳天源新能源股份有限公司">深圳天源新能源股份有限公司</a>
+                                            </div>
+                    
+                    <div class="com-clear  text-ellipsis   tag" style="height:30px;">
+                        
+                        <span class="tag00" style="vertical-align: top;">科技型中小企业</span><span class="tag00" style="vertical-align: top;">专精特新中小企业</span>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <i class="zjicon zjicon_new hide"></i>
+
+            </li>
+                
+            </ul>
+        </div>
+       <div class="company-list-info">
+           <ul>
+               <li>
+                   <div class="col-md-1 default_cursor_cs">法人</div>
+                   <div class="col-md-0">电话</div>
+                   <div class="col-md-0">社交</div>
+                   <div class="col-md-0">官网</div>
+                   <div class="col-md-1">品牌/产品</div>
+                   <div class="col-md-0 default_cursor_cs">参展</div>
+                   <div class="col-md-1">成立日期</div>
+                   <div class="col-md-1">最新参保</div>
+                   <div class="col-md-2">行业分类</div>
+               </li>
+               
+               <li data-e="Wy1Nw2GQj0v89m135oVaPnVR4YJz3rlk" data-q="jRXDMNn5PgE9xaje0k1Bp3kwrLQd1OKv" data-title="青岛高测科技股份有限公司" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )" class="default_cursor_cs">
+               <div class="col-md-1">张顼 <a href="javascript:;" class=" fontNum show_floating_relcompany" data-value="jRXDMNn5PgE9xaje0k1Bp3kwrLQd1OKv" data-t="张顼" data-v="jRXDMNn5PgE9xaje0k1Bp3kwrLQd1OKv"></a>
+               </div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_contact fontNum">6</a></div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_social fontNum">165</a></div>
+               <div class="col-md-0"><a href="javascript:;" onclick="tj_login();" class=""> <i class="layui-icon layui-icon-link font12"></i> </a></div>
+               <div class="col-md-1 default_cursor_cs">高测股份</div>
+               <div class="col-md-0 ">17</div>
+               <div class="col-md-1">2006-10-20</div>
+
+               <div class="col-md-1">1269</div>
+               <div class="col-md-2">制造业</div>
+               </li>
+               
+               <li data-e="1pQe7VGMyo3qWBlr1enZKgxvNJ2lkz8P" data-q="r931exVLXGd4gZJPepEB8ky0KOlwovQW" data-title="营口金辰机械股份有限公司" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+               <div class="col-md-1">李义升 <a href="javascript:;" class=" fontNum show_floating_relcompany" data-value="r931exVLXGd4gZJPepEB8ky0KOlwovQW" data-t="李义升" data-v="r931exVLXGd4gZJPepEB8ky0KOlwovQW"></a>
+               </div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_contact fontNum">8</a></div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_social fontNum">76</a></div>
+               <div class="col-md-0"><a href="javascript:;" onclick="tj_login();" class=""> <i class="layui-icon layui-icon-link font12"></i> </a></div>
+               <div class="col-md-1">金辰股份</div>
+               <div class="col-md-0 ">24</div>
+               <div class="col-md-1">2004-08-30</div>
+
+               <div class="col-md-1">548</div>
+               <div class="col-md-2">制造业</div>
+               </li>
+               
+               <li data-e="6PQvMwX75kdnGZd3e4OaDe0EOAb1rjKg" data-q="PNbXvjMky3DYLaKR0oB4qGzgWKdEol2p" data-title="无锡鑫宏业特塑线缆有限公司" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+               <div class="col-md-1">卜晓华 <a href="javascript:;" class=" fontNum show_floating_relcompany" data-value="PNbXvjMky3DYLaKR0oB4qGzgWKdEol2p" data-t="卜晓华" data-v="PNbXvjMky3DYLaKR0oB4qGzgWKdEol2p"></a>
+               </div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_contact fontNum">5</a></div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_social fontNum">11</a></div>
+               <div class="col-md-0"><a href="javascript:;" onclick="tj_login();" class=""> <i class="layui-icon layui-icon-link font12"></i> </a></div>
+               <div class="col-md-1"></div>
+               <div class="col-md-0 ">47</div>
+               <div class="col-md-1">2004-02-13</div>
+
+               <div class="col-md-1">503</div>
+               <div class="col-md-2">制造业</div>
+               </li>
+               
+               <li data-e="nLNreKDQ0Evl1mv5nN0Z584pMOjAqozx" data-q="zO25YVXj3lkEga87vPOB68Prw1RbdqDv" data-title="湖州上辐电线电缆高技术有限公司" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+               <div class="col-md-1">屠建民 <a href="javascript:;" class=" fontNum show_floating_relcompany" data-value="zO25YVXj3lkEga87vPOB68Prw1RbdqDv" data-t="屠建民" data-v="zO25YVXj3lkEga87vPOB68Prw1RbdqDv"></a>
+               </div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_contact fontNum">7</a></div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_social fontNum">8</a></div>
+               <div class="col-md-0"><a href="javascript:;" onclick="tj_login();" class=""> <i class="layui-icon layui-icon-link font12"></i> </a></div>
+               <div class="col-md-1"></div>
+               <div class="col-md-0 ">22</div>
+               <div class="col-md-1">2007-07-16</div>
+
+               <div class="col-md-1">89</div>
+               <div class="col-md-2">制造业</div>
+               </li>
+               
+               <li data-e="klgXozrypn6bjmXXxvmeY3v7wE520GMq" data-q="8rQb7EpwxLvjNm4pddmg39V6PDkzdnoG" data-title="深圳华盛昌机械实业有限公司" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+               <div class="col-md-1">袁剑敏 <a href="javascript:;" class=" fontNum show_floating_relcompany" data-value="8rQb7EpwxLvjNm4pddmg39V6PDkzdnoG" data-t="袁剑敏" data-v="8rQb7EpwxLvjNm4pddmg39V6PDkzdnoG"></a>
+               </div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_contact fontNum">11</a></div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_social fontNum">38</a></div>
+               <div class="col-md-0"><a href="javascript:;" onclick="tj_login();" class=""> <i class="layui-icon layui-icon-link font12"></i> </a></div>
+               <div class="col-md-1">华盛昌</div>
+               <div class="col-md-0 ">71</div>
+               <div class="col-md-1">1991-03-26</div>
+
+               <div class="col-md-1">1167</div>
+               <div class="col-md-2">制造业</div>
+               </li>
+               
+               <li data-e="joQz6GxpOE4qVZ9Nz8qm17Ngwb2PkDyv" data-q="zO25YVXj3lkEga8qLqWZ68Prw1RbdqDv" data-title="江苏佳讯纳通能源技术有限公司" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+               <div class="col-md-1">郑洪涛 <a href="javascript:;" class=" fontNum show_floating_relcompany" data-value="zO25YVXj3lkEga8qLqWZ68Prw1RbdqDv" data-t="郑洪涛" data-v="zO25YVXj3lkEga8qLqWZ68Prw1RbdqDv"></a>
+               </div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_contact fontNum">3</a></div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_social fontNum">3</a></div>
+               <div class="col-md-0"><a href="javascript:;" onclick="tj_login();" class=""> <i class="layui-icon layui-icon-link font12"></i> </a></div>
+               <div class="col-md-1">佳讯纳通</div>
+               <div class="col-md-0 ">14</div>
+               <div class="col-md-1">2017-07-12</div>
+
+               <div class="col-md-1">182</div>
+               <div class="col-md-2">制造业</div>
+               </li>
+               
+               <li data-e="vAWpyMbN0od94aWvA2NB3Y7jGrwzeKD8" data-q="" data-title="Zucchetti Centro Sistemi SpA">
+               <div class="col-md-1"> <a href="javascript:;" class=" fontNum show_floating_relcompany" data-value="" data-t="" data-v=""></a>
+               </div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_contact fontNum"></a></div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_social fontNum"></a></div>
+               <div class="col-md-0"><a href="javascript:;" onclick="tj_login();" class="hide"> <i class="layui-icon layui-icon-link font12"></i> </a></div>
+               <div class="col-md-1"></div>
+               <div class="col-md-0 ">20</div>
+               <div class="col-md-1"></div>
+
+               <div class="col-md-1"></div>
+               <div class="col-md-2"></div>
+               </li>
+               
+               <li data-e="7qKGvXbr1lVEzZon10GaWwnP23opR4k0" data-q="Yz1POLMeRrl6DmDbVnPa35vxQqJbGnjg" data-title="天津彩达新材料科技有限公司" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+               <div class="col-md-1">祁宏伟 <a href="javascript:;" class=" fontNum show_floating_relcompany" data-value="Yz1POLMeRrl6DmDbVnPa35vxQqJbGnjg" data-t="祁宏伟" data-v="Yz1POLMeRrl6DmDbVnPa35vxQqJbGnjg"></a>
+               </div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_contact fontNum">7</a></div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_social fontNum">3</a></div>
+               <div class="col-md-0"><a href="javascript:;" onclick="tj_login();" class=""> <i class="layui-icon layui-icon-link font12"></i> </a></div>
+               <div class="col-md-1"></div>
+               <div class="col-md-0 ">30</div>
+               <div class="col-md-1">2010-07-07</div>
+
+               <div class="col-md-1">37</div>
+               <div class="col-md-2">科学研究和技术服务业</div>
+               </li>
+               
+               <li data-e="95MnA0Pd3y1roZL6RvgBeYK8vWpGE6OV" data-q="" data-title="Robert Bürkle GmbH">
+               <div class="col-md-1"> <a href="javascript:;" class=" fontNum show_floating_relcompany" data-value="" data-t="" data-v=""></a>
+               </div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_contact fontNum"></a></div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_social fontNum"></a></div>
+               <div class="col-md-0"><a href="javascript:;" onclick="tj_login();" class="hide"> <i class="layui-icon layui-icon-link font12"></i> </a></div>
+               <div class="col-md-1"></div>
+               <div class="col-md-0 ">22</div>
+               <div class="col-md-1"></div>
+
+               <div class="col-md-1"></div>
+               <div class="col-md-2"></div>
+               </li>
+               
+               <li data-e="PWRd1K3Xj2JY7mVk8JBk0xD8GLzQel4b" data-q="YGpLgPkJeVzXDZq2MPmOjw5qEKQ0l6r2" data-title="深圳天源新能源股份有限公司" style="height:calc(76px + -1*30px + 1*30px  + 0*20px )">
+               <div class="col-md-1">施洪峰 <a href="javascript:;" class=" fontNum show_floating_relcompany" data-value="YGpLgPkJeVzXDZq2MPmOjw5qEKQ0l6r2" data-t="施洪峰" data-v="YGpLgPkJeVzXDZq2MPmOjw5qEKQ0l6r2"></a>
+               </div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_contact fontNum">5</a></div>
+               <div class="col-md-0"><a href="javascript:void(0)" class="show_floating_social fontNum">8</a></div>
+               <div class="col-md-0"><a href="javascript:;" onclick="tj_login();" class=""> <i class="layui-icon layui-icon-link font12"></i> </a></div>
+               <div class="col-md-1">天源新能</div>
+               <div class="col-md-0 ">13</div>
+               <div class="col-md-1">2004-03-30</div>
+
+               <div class="col-md-1">29</div>
+               <div class="col-md-2">制造业</div>
+               </li>
+               
+           </ul>
+       </div></div>
+<style>
+    div.company-list > .company-list-box > .company-list-info > ul > li:not(:first-child) > div {
+        height: 60px;
+        line-height: 60px;
+    }
+    .uulive{
+        display: inline-block;
+        /*background: #fff7f6;*/
+        font-size: 12px;
+        padding-left: 64px;
+        padding-right: 6px;
+        line-height: 22px;
+        border-radius: 4px;
+        color: #666;
+        padding: 0px 3px;
+        height: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-top:2px;
+        margin-bottom: 2px;
+        width:auto;
+    }
+    .uulive p{
+        display:inline-block;
+    }
+    .uulive_title{
+        color:#fd485e;
+        font-weight: bold;
+    }
+    .spline{
+        color: #999;
+        position: relative;
+        top: -1px;
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+    .text-danger {
+        color: #FF6060;
+    }
+    .divboxs_con{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height:50px;
+        width:calc(100% - 60px);
+        justify-content: center;
+    }
+    .divboxs_con>div.divboxs{
+        display: inline-block;
+        transition: none;
+        text-decoration: none;
+        position: relative;
+        z-index: 1;
+        width:calc(100% - 40px);
+        line-height: normal;
+        vertical-align: middle;
+        overflow: hidden;
+        line-height:28px;
+    }
+    .divboxs1{
+        position:relative;
+    }
+    .divboxs_con>div.divboxs .ntag{
+        vertical-align: top;
+    }
+    div.company-list > .company-list-box > .company-list-info > ul > li > div.col-md-0{
+        width:60px;
+    }
+    div.company-list > .company-list-box > .company-list-info > ul > li > div.col-md-1{
+        width:16%;
+    }
+    div.company-list > .company-list-box > .company-list-info > ul > li > div.col-md-2{
+        width:20%;
+    }
+    .filter-options-box em{
+        color:#666;
+    }
+    .loth {
+        display: inline-block;
+        transition: none;
+        text-decoration: none;
+        line-height: normal !important;
+        vertical-align: middle;
+        overflow: hidden;
+        color: #666;
+        font-size: 12px;
+    }
+    .company-list-left .divboxs_con,.company-list-left .divboxs_con * {
+        box-sizing: border-box;
+    }
+    .company-list-left .intro {
+        color: #5a626d;
+        font-size: 13px;
+        width: 90%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+</style>
+    <script id="searchListTemplate" type="text/html">
+               <div class="company-list-left">
+            <ul>
+                <li>
+                    <div class="col-md-12 com-wc" >公司名称</div>
+                </li>
+                {{each rows as value}}
+                <li data-e="{{value.e}}" class="promptaisho" data-q="{{value.q}}"  {{ if value.lives.length >0  || value.followstatus || value.tags.length >0 || (value.ennum>0 && value.photonum>0)}} style="height:calc(76px + {{value.lives.length-1}}*30px + {{value.tags.length ||  (value.ennum>0 && value.photonum>0) ? 1 : 0}}*30px  + {{value.followstatus ? 1 : 0}}*20px )" {{ /if }}>
+                    <a class="logo-box font13  show_floating_frame "  href="javascript:void(0)">
+                        {{ if value.img }}
+                        <img  src="{{value.img}}"  alt=""  onerror="this.src='/static/index/images/defaultlogo.png'"   class="ed-imgauto" />
+                        {{ else }}
+                        <span  class="czslogo "  style="border-radius:0px !important;font-size:14px !important;">{{value.imgti}}</span>
+                        {{ /if }}
+                    </a>
+
+                <div class="divboxs_con" {{ if value.lives.length >1 || value.tags.length || (value.ennum>0 && value.photonum>0) }} style="height:auto;"  {{ /if }}>
+                    <div class="divboxs intro ">
+                    <a  class="  show_floating_frame " href="javascript:void(0)" title="{{value.title}}">{{value.title}}</a>
+                                            </div>
+                    {{ if value.tags.length >0   || (value.ennum>0 && value.photonum>0) }}
+                    <div class="com-clear  text-ellipsis   tag"  style="height:30px;"  >
+                        {{ if value.ennum>0 && value.photonum>0  }}
+                        <span class="tag00" style="vertical-align: top;">特装</span>
+                        {{ /if }}
+                        {{each value.tags }}<span class="tag00" style="vertical-align: top;">{{ $value }}</span>{{/each}}
+                    </div>
+                    {{ /if }}
+                    {{ if value.lives.length >0 }}
+<div class="com-clear   " style="position: relative;display: flow-root;height:auto; cursor: pointer;">
+    {{each value.lives }}<div class="textflex">
+    <div class="uulive text-ellipsis ">
+        <p class="uulive_cont lanalysis"><img src="/static/index/images/tips.png" height="15px"> {{ print $value }}</p>
+    </div>  </div>
+    {{/each}}
+</div>
+{{ /if }}
+                    {{ if value.followstatus  }}<div class="com-clear text-ellipsis  loth " {{ if value.lives.length >0 }} style="margin-left:20px;" {{ /if }}><span>最新跟进：{{value.followstatus}}</span> </div>{{ /if }}
+                </div>
+                <i class="zjicon zjicon_new {{value.liup>0    ?  '' : 'hide'}}"></i>
+
+            </li>
+                {{/each}}
+            </ul>
+        </div>
+       <div class="company-list-info">
+           <ul >
+               <li>
+                   <div class="col-md-1">法人</div>
+                   <div class="col-md-0">电话</div>
+                   <div class="col-md-0">社交</div>
+                   <div class="col-md-0">官网</div>
+                   <div class="col-md-1" >品牌/产品</div>
+                   <div class="col-md-0" >参展</div>
+                   <div class="col-md-1">成立日期</div>
+                   <div class="col-md-1">最新参保</div>
+                   <div class="col-md-2">行业分类</div>
+               </li>
+               {{each rows as value }}
+               <li  data-e="{{value.e}}" data-q="{{value.q}}"  data-title="{{value.title}}"  {{ if value.lives.length >0  || value.tags.length  || value.followstatus  || (value.ennum>0 && value.photonum>0)}} style="height:calc(76px + {{value.lives.length-1}}*30px + {{value.tags.length || (value.ennum>0 && value.photonum>0) ? 1 : 0}}*30px  + {{value.followstatus ? 1 : 0}}*20px )" {{ /if }}>
+               <div class="col-md-1">{{value.cname ? value.cname : ''}} {{value.cnums>1 ?  '(' : '' }}<a href="javascript:;" class=" fontNum show_floating_relcompany"   data-value="{{ value.keyno }}"  data-t="{{ value.cname }}" data-v="{{ value.q }}" >{{value.cnums>1 ?  value.cnums : '' }}</a>{{value.cnums>1 ?  ')' : '' }}
+               </div>
+               <div class="col-md-0" ><a href="javascript:void(0)" class="show_floating_contact fontNum"  >{{value.nums_contact>0 ?  value.nums_contact  : ''}}</a></div>
+               <div class="col-md-0" ><a href="javascript:void(0)" class="show_floating_social fontNum"  >{{value.nums_social>0 ?  value.nums_social  : ''}}</a></div>
+               <div class="col-md-0"><a href="javascript:;"    onclick="tj_login();"  class="{{value.web    ?  '' : 'hide'}}"> <i class="layui-icon layui-icon-link font12"></i> </a></div>
+               <div class="col-md-1">{{value.buss ? value.buss : ''}}</div>
+               <div class="col-md-0 " >{{value.ennum >0 ? value.ennum : ''}}</div>
+               <div class="col-md-1">{{value.timecr ? value.timecr : ''}}</div>
+
+               <div class="col-md-1">{{value.numcz>0 ? value.numcz : ''}}</div>
+               <div class="col-md-2">{{value.industry ? value.industry : ''}}</div>
+               </li>
+               {{/each}}
+           </ul>
+       </div>
+
+            </script>
+ <script>
+     $(document).ready(function() {
+         $(document).bind("keydown",function(e){e=window.event||e; if(e.keyCode==123){e.keyCode = 0;return  false;} }); });
+
+     $(function(){
+         $("body").on("click.content_detail",".detail",function(){
+             selectText($(this).attr('id'));
+             document.execCommand('copy');
+             record_ion( $(".company-list-right").find("li[data-id='"+$(this).parents("li[data-id]").data("id")+"']").find(".mrecord"),$(this).text());
+             $(".company-list-right").find("li[data-id='"+$(this).parents("li[data-id]").data("id")+"']").find(".mrecord").click();
+         });
+         $(document).on("contextmenu",function(){return false;});
+         $("#list.company-list-box").bind("selectstart",function(){return false;});
+         $("body").on("click.mrecord",".mrecord",function(){
+            record_ion($(this));
+         });
+
+     });
+     function record_ion(obj,tex) {
+         var  mrecord = $(obj).parents("li").data("id");
+         var  name = $(obj).data("v");
+         var rel = {};
+         rel['data'] = mrecord;
+         rel['name'] = name;
+         if(tex){
+             rel['tex'] = tex;
+         }
+         $("body").css('overflow-y','hidden');
+         var cwidth = $(window).width();
+         $.openPopupLayer({
+             name:"recordPopup",
+             width:cwidth*0.7,
+             parameters:rel,
+             url:"/vprecord"
+         });
+     }
+ </script>
+		</div>
+	</div>
+	<div align="right" class="m-pagination com-mt15" id="_j_tn_pagination"></div>
+</div>
+<style>
+	.wraps_mains{
+		overflow:hidden;
+	}
+	.div_footers_bgs{
+		position: fixed;
+		bottom:0px;
+		width:100%;
+		height:220px;
+		background-color:rgba(204,204,204,0.85);
+		color:#fff;
+		z-index:9999;
+	}
+	.div_footers_bgs_wrap{
+		width:100%;height:100%;background-color:rgba(0,0,0,0.7);
+	}
+	.div_footers_bgs_box{
+		padding:40px 30px;
+	}
+	.bgs_box_title{
+		font-size:28px;color:#fff;margin-bottom:20px;
+	}
+</style>
+<div class="div_footers_bgs">
+<div class="div_footers_bgs_wrap">
+	<div class="div_footers_bgs_box">
+		<div class="bgs_box_title">申请免费体验查看更多</div>
+		<a class="btn btn-primary  com-mt20" href="javascript:void(0)" onclick="tj_register()">立即注册</a>
+	</div>
+</div>
+<script src="/static/index/js/template.js"></script>
+
+
+	<script>
+		var iid = "";
+		var iids = "4124";
+		$(function(){
+			ajax_data_gj_country_list();
+			$("body").on("click.viewer-container",".viewer-container",function(e){
+				stopevent(e);
+			});
+			$(document).on("contextmenu.viewer-open",".viewer-open",function(){return false;});
+		})
+
+	</script>
+	<script src="/static/index/js/industrytopic.js?4124"></script>
+	</div>
+<script src="/static/index/js/popupview.js?23"></script>
+<div class="floating_frame col-md-9"></div>
+<script>
+	$(".needLogin").on("click",function(){
+		if(!gbid){
+			nologin('即可收藏');
+			return false;
+		}
+		var obj =this;
+		var status = $(obj).find("span").hasClass("focused") ? 0 : 1;
+		var id = status ? pid : $(obj).attr('data-value');
+		$.post("/view_collection",{id:id,flag:status},function(result){
+			resu = eval("("+result+")");
+			if(resu){
+				if(status){
+					$(obj).attr('data-value',resu);
+					$(obj).find("span").attr({'title':"已收藏",'class':'focused','data-value':resu});
+					$(obj).find("span").html("已收藏");
+					toast("已收藏 "+$(obj).attr('data')+" ，进入我的收藏查看收藏会刊",1);
+				}else{
+					$(obj).attr('data-value',"");
+					$(obj).find("span").attr({'title':"立即收藏",'class':'focusable','data-value':""});
+					$(obj).find("span").html("立即收藏");
+					toast("已取消收藏 "+$(obj).attr('data'),1)
+				}
+			}
+		});
+	})
+</script>
+</div>
+</div></main>
+</div>
+</div>
+</div></div>
+<div style="clear: both;"></div>
+<link href="/static/index/css/footer_new.css?2" rel="stylesheet">
+<input type="hidden" id="uname" value="">
+<input type="hidden" id="page" value="10">
+</div>
+
+<iframe name="1268237" height="0" width="0" src="https://360fenxi.mediav.com/mediav1130.html" style="display: none;" pvmrwejua=""></iframe><iframe name="1268237" height="0" width="0" src="https://s.union.360.cn/proxy.html" style="display: none;"></iframe><kimi-web-extension data-wxt-shadow-root="" style="z-index: 2147483647; overflow: visible; position: relative; width: 0px; height: 0px; display: block;"></kimi-web-extension><div class="layui-layer-move"></div><div class="layui-layer-shade default_cursor_cs" id="layui-layer-shade4" times="4" style="z-index: 19891017; background-color: rgb(0, 0, 0); opacity: 0.1;"></div><div class="layui-layer layui-layer-iframe layui-anim layui-anim-rl layui-layer-adminRight" id="layui-layer4" type="iframe" times="4" showtime="0" contype="string" style="z-index: 19891018; width: 80%; height: 100%; top: 0px; left: 294px;"><div id="floating_frame1750599464889" class="layui-layer-content"><iframe scrolling="auto" allowtransparency="true" id="layui-layer-iframe4" name="layui-layer-iframe4" onload="this.className='';" class="default_cursor_cs" frameborder="0" src="/vpview-Wy1Nw2GQj0v89m135oVaPnVR4YJz3rlk-jRXDMNn5PgE9xaje0k1Bp3kwrLQd1OKv" style="height: 1002px;"></iframe></div><span class="layui-layer-setwin"></span><span class="layui-layer-resize"></span></div></body>
